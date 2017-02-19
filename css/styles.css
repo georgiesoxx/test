@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Khula:300&subset=latin-ext");
+body {
+  text-align: center;
+}
+
+body * {
+  font-family: 'Khula', sans-serif;
+  font-weight: normal;
+  line-height: normal;
+}
+
+body h1 {
+  display: inline-block;
+  position: relative;
+  padding: 20px 0;
+  margin: 30px 0 0 0;
+}
+
+body h1:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+body .content {
+  margin-top: 50px;
+}
+
+body .content label, body .content input[type='text'], body .content input[type='button'] {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+body .content #venueResults {
+  margin: 50px 60px;
+  padding: 20px 0;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+body .content #venueResults ul {
+  list-style: none;
+}

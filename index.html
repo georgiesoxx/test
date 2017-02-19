@@ -3,9 +3,18 @@
   <title>Venue search</title>
   <script src="lib/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
   <script src="js/script.js" type="text/javascript"></script>
+  <link href="css/styles.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-  <input id="locationTxt" type="text" value="" placeholder="Insert placename. EXAMPLE: 'Bicester'" />
-  <input type="button" value="Search" onclick="searchForVenues()" />
+  <h1>Search for venues near you</h1>
+  <div class="content">
+    <label for="locationTxt">Location:</label>&nbsp;<input id="locationTxt" type="text" value="" placeholder="insert location" />
+    <input type="button" value="Search" onclick="searchForVenues()" />
+    <div id="venueResults">
+      <ul>
+        <li>Please search for a location useing the form above</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
