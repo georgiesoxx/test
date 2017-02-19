@@ -1,21 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Khula:300&subset=latin-ext');
+
 $primaryColor: #378965;
 $secondaryColor: #ffffff;
 body {
   background-color: $primaryColor;
-  text-align:center;
   margin:0;
   padding: 0;
+  text-align:center;
   * {
-    font-family: 'Khula', sans-serif;
-    font-weight: normal;
-    line-height: normal;
     color: $secondaryColor;
   }
   h1 {
     display: inline-block;
     position: relative;
-    padding: 20px 0;
+    padding: 25px 0 20px 0;
     margin: 30px 0 0 0;
     &:after {
       content: "";
@@ -49,19 +46,55 @@ body {
     }
     #venueResults {
       margin: 50px 60px;
-      padding: 20px 0;
+      padding: 25px 0 20px 0;
       border-top: 1px solid rgba($secondaryColor,0.1);
       border-bottom: 1px solid rgba($secondaryColor,0.1);
-      ul {
-        list-style: none;
-        &.error, &.notSearched {
-          li {
-            color: rgba($secondaryColor,0.5);
-          }
-        }
-        li {
-          .venueType {
-            color: rgba($secondaryColor,0.35);
+      .error, .notSearched {
+        opacity: 0.5;
+      }
+      .row {
+        .col-xs-12 {
+          .panel {
+            background-color: transparent;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            margin-bottom:50px;
+            h3 {
+              display: inline-block;
+              position: relative;
+              padding: 15px 0 10px 0;
+              margin: 0 0 20px 0;
+              &:after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                top:0;
+                left:5%;
+                width:90%;
+                height:100%;
+                border-top: 1px solid rgba($secondaryColor,0.25);
+                border-bottom: 1px solid rgba($secondaryColor,0.25);
+              }
+              .label {
+                line-height: 2;
+                color: $primaryColor;
+                background: $secondaryColor;
+              }
+            }
+            a {
+              color: $secondaryColor;
+              text-decoration: underline;
+              &:hover, &:focus {
+                text-decoration: none;
+                opacity:0.5;
+                color: $secondaryColor;
+              }
+            }
+            .contactDetails {
+              span {
+                margin: 0 10px;
+              }
+            }
           }
         }
       }
