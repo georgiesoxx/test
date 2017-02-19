@@ -1,12 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Khula:300&subset=latin-ext");
 body {
+  background-color: #378965;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 body * {
   font-family: 'Khula', sans-serif;
   font-weight: normal;
   line-height: normal;
+  color: #ffffff;
 }
 
 body h1 {
@@ -24,8 +28,8 @@ body h1:after {
   left: 10%;
   width: 80%;
   height: 100%;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 body .content {
@@ -37,13 +41,36 @@ body .content label, body .content input[type='text'], body .content input[type=
   line-height: 20px;
 }
 
+body .content input[type='text'] {
+  background: #ffffff;
+}
+
+body .content input[type='button'] {
+  background: #e6e6e6;
+}
+
+body .content input[type='text'], body .content input[type='button'] {
+  height: 35px;
+  padding: 0 5px;
+  color: #378965;
+  border: none;
+}
+
 body .content #venueResults {
   margin: 50px 60px;
   padding: 20px 0;
-  border-top: 1px solid grey;
-  border-bottom: 1px solid grey;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 body .content #venueResults ul {
   list-style: none;
+}
+
+body .content #venueResults ul.error li, body .content #venueResults ul.notSearched li {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+body .content #venueResults ul li .venueType {
+  color: rgba(255, 255, 255, 0.35);
 }

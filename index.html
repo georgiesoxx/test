@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Venue search</title>
+  <title>Search for venues near you</title>
   <script src="lib/jquery/jquery-3.1.1.min.js" type="text/javascript"></script>
   <script src="js/script.js" type="text/javascript"></script>
   <link href="css/styles.css" rel="stylesheet" type="text/css"/>
@@ -8,11 +8,11 @@
 <body>
   <h1>Search for venues near you</h1>
   <div class="content">
-    <label for="locationTxt">Location:</label>&nbsp;<input id="locationTxt" type="text" value="" placeholder="insert location" />
+    <label for="locationTxt">Location:</label>&nbsp;<input id="locationTxt" type="text" value="" placeholder="insert a location" />
     <input type="button" value="Search" onclick="searchForVenues()" />
     <div id="venueResults">
-      <ul>
-        <li>Please search for a location useing the form above</li>
+      <ul class="notSearched">
+        <li>Please search for venues in a specific location using the form above</li>
       </ul>
     </div>
   </div>

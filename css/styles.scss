@@ -1,10 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Khula:300&subset=latin-ext');
+$primaryColor: #378965;
+$secondaryColor: #ffffff;
 body {
+  background-color: $primaryColor;
   text-align:center;
+  margin:0;
+  padding: 0;
   * {
     font-family: 'Khula', sans-serif;
     font-weight: normal;
     line-height: normal;
+    color: $secondaryColor;
   }
   h1 {
     display: inline-block;
@@ -19,8 +25,8 @@ body {
       left:10%;
       width:80%;
       height:100%;
-      border-top: 1px solid grey;
-      border-bottom: 1px solid grey;
+      border-top: 1px solid rgba($secondaryColor,0.25);
+      border-bottom: 1px solid rgba($secondaryColor,0.25);
     }
   }
   .content {
@@ -30,14 +36,34 @@ body {
       line-height: 20px;
     }
     input[type='text'] {
+      background: $secondaryColor;
+    }
+    input[type='button'] {
+      background: darken($secondaryColor,10%);
+    }
+    input[type='text'], input[type='button'] {
+      height:35px;
+      padding: 0 5px;
+      color: $primaryColor;
+      border: none;
     }
     #venueResults {
       margin: 50px 60px;
       padding: 20px 0;
-      border-top: 1px solid grey;
-      border-bottom: 1px solid grey;
+      border-top: 1px solid rgba($secondaryColor,0.1);
+      border-bottom: 1px solid rgba($secondaryColor,0.1);
       ul {
         list-style: none;
+        &.error, &.notSearched {
+          li {
+            color: rgba($secondaryColor,0.5);
+          }
+        }
+        li {
+          .venueType {
+            color: rgba($secondaryColor,0.35);
+          }
+        }
       }
     }
   }
