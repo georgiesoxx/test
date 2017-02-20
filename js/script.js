@@ -2,6 +2,8 @@
 var venueObj={};
 
 $(document).ready(function() {
+  //start with no location
+  $('#locationTxt').val("");
   //allow user to search when they hit the enter key when locationTxt is in focus
   $('#locationTxt').keyup(function(e){
     if(e.keyCode == 13){
@@ -63,7 +65,7 @@ function searchForVenues(){
         var contactDetails=$("<div>", {"class":"contactDetails"});
         //add url of venue to page if one exists
         if(venueCurrent.url){
-          var venueURL=$("<a>", {"href": venueCurrent.url+" ", "text": venueCurrent.url});
+          var venueURL=$("<a>", {"href": venueCurrent.url+" ", "text": venueCurrent.url, "target":"_blank"});
           var website=$("<span>", {"class": "website"});
           website.append("Website: ").append(venueURL).append(".");
           contactDetails.append(website);
@@ -75,10 +77,10 @@ function searchForVenues(){
         }
         //add twitter link of venue to page if one exists
         if(venueCurrent.contact.twitter){
-          var venueTwitter=$("<a>", {"href": "https://twitter.com/"+venueCurrent.contact.twitter, "text":"@"+venueCurrent.contact.twitter});
+          var venueTwitter=$("<a>", {"href": "https://twitter.com/"+venueCurrent.contact.twitter, "text":"@"+venueCurrent.contact.twitter, "target":"_blank"});
           var twitter=$("<span>", {"class": "twitter"});
           twitter.append("Twitter: ").append(venueTwitter).append(".");
-          contactDetails.append(twitter)
+          contactDetails.append(twitter);
         }
         venuePanel.append(contactDetails)
         $("#venueResults .container").append(venueRow);

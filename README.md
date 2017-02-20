@@ -1,4 +1,4 @@
-I started by reading through the documentation on https://developer.foursquare.com/docs/ and then went about retrieving the JSON using jQuery.
+I started but reading through the documentation on https://developer.foursquare.com/docs/ and then started by simply retrieving the JSON using jQuery.
 
 Next I added some simple validation so that if the user enters a location that is not valid or searches using an empty string they would get a relevant message informing them of an error.
 
